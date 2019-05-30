@@ -271,7 +271,7 @@ class Packaging {
 		}
 		else {
 			// var node = packageXml.querySelector("item[properties='cover-image']");
-			var node = qsp(packageXml, "item", {"properties":"cover-image"});
+			var node = qsp(packageXml, "item", {"id":"cover-image"});
 			return node ? node.getAttribute("href") : "";
 		}
 	}

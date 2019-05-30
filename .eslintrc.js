@@ -17,7 +17,7 @@ module.exports = {
         "indent": [
             "error",
             "tab",
-            { "VariableDeclarator": { "var": 2, "let": 2, "const": 3 } }
+            {"VariableDeclarator": {"var": 2, "let": 2, "const": 3}}
         ],
         "linebreak-style": [
             "error",
@@ -31,11 +31,11 @@ module.exports = {
             "error",
             "always"
         ],
-        "no-unused-vars" : ["warn"],
-        "no-console" : ["warn"],
+        "no-unused-vars": ["warn"],
+        "no-console": ["warn"],
         "no-unused-vars": [
-          "error",
-          { "vars": "all", "args": "none" }
+            "error",
+            {"vars": "all", "args": "none"}
         ],
         "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
         "valid-jsdoc": ["warn"]

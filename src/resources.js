@@ -115,7 +115,7 @@ class Resources {
 			return this.settings.archive.createUrl(url, {"base64": (this.settings.replacements === "base64")});
 		} else {
 			if (this.settings.replacements === "base64") {
-				return this.settings.request(url, 'blob')
+				return this.settings.request(url, "blob")
 					.then((blob) => {
 						return blob2base64(blob);
 					})
@@ -123,9 +123,9 @@ class Resources {
 						return createBase64Url(blob, mimeType);
 					});
 			} else {
-				return this.settings.request(url, 'blob').then((blob) => {
+				return this.settings.request(url, "blob").then((blob) => {
 					return createBlobUrl(blob, mimeType);
-				})
+				});
 			}
 		}
 	}
@@ -180,7 +180,7 @@ class Resources {
 					if (indexInUrls > -1) {
 						this.replacementUrls[indexInUrls] = replacementUrl;
 					}
-				}.bind(this))
+				}.bind(this));
 
 
 			replaced.push(replacement);
