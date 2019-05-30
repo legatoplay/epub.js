@@ -657,7 +657,6 @@ class Book {
      * @return {string} coverUrl
      */
     coverUrl() {
-        console.log(this);
         var retrieved = this.loaded.cover.then((url) => {
             if (this.archived) {
                 return this.archive.createUrl(url);
