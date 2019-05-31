@@ -614,7 +614,7 @@ class Rendition {
 
 			this._layout.on(EVENTS.LAYOUT.UPDATED, (props, changed) => {
 				this.emit(EVENTS.RENDITION.LAYOUT, props, changed);
-			})
+			});
 		}
 
 		if (this.manager && this._layout) {

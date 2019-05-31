@@ -49,20 +49,33 @@ describe("ePub", function () {
     });
 
     it("get epub2 cover blob", function () {
-        var book = ePub("/fixtures/epub2.epub",{
+        var book = ePub("/fixtures/epub2.epub", {
             restore: false
         });
-        book.coverUrl().then(function (coverUrl) {
-            console.log("book cover url");
-            console.log(coverUrl);
+        // book.coverUrl().then(function (coverUrl) {
+        //     console.log("book cover url");
+        //     console.log(coverUrl);
+        // });
+
+        book.ready.then(() => {
+            console.log(book.navigation);
+            console.log(book.pageList);
         });
     });
 
     it("get epub3 cover blob", function () {
         var book = ePub("/fixtures/epub3.epub");
-        book.coverUrl().then(function (coverUrl) {
-            console.log("book cover url");
-            console.log(coverUrl);
+        // book.coverUrl().then(function (coverUrl) {
+        //     console.log("book cover url");
+        //     console.log(coverUrl);
+        // });
+        //
+        // book.loaded.navigation.then(toc => {
+        //     console.log(toc);
+        // });
+        book.ready.then(() => {
+            console.log(book.navigation);
+            console.log(book.pageList);
         });
     });
 
