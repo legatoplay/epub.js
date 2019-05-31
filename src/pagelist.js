@@ -74,7 +74,6 @@ class PageList {
     }
 
     parseNcx(navXml) {
-        console.log(navXml);
         var list = [];
         var i = 0;
         var item;
